@@ -8,6 +8,5 @@ import java.util.List;
 @Repository
 public interface TelemetryRepository extends MongoRepository<TelemetryPoint, String>, TripQueryRepository {
 
-    List<TelemetryPoint> findByVehicleId(String vehicleId);
 
 }

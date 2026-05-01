@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class TripDetector {
 
     public List<Trip> detect(List<TelemetryPoint> points) {
-        Map<String, List<TelemetryPoint>> pointsByVehicle = new HashMap<String, List<TelemetryPoint>>();
+        Map<String, List<TelemetryPoint>> pointsByVehicle = new HashMap<>();
         for (TelemetryPoint point: points) {
             String curr = point.getVehicleId();
             if (!pointsByVehicle.containsKey(curr)) {

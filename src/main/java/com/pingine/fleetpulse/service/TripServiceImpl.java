@@ -25,7 +25,7 @@ public class TripServiceImpl implements TripService {
 
         VehicleResponse vehicle = vehicleService.getById(vehicleId);
 
-        List<TelemetryPoint> points = telemetryRepository.findByVehicleId(vehicleId);
+        List<TelemetryPoint> points = telemetryRepository.findRecentPoints(vehicleId, 1000);
 
         if (points == null || points.isEmpty()) {
             throw new TripsForVehicleNotFoundException(vehicleId);
